@@ -1,1 +1,20 @@
+# Quantidade de Rodas
+# Peso Bruto em Quilogramas
+# Quantidade de pessoas no Veicculo
 
+qtdrodas = int(input('Digite a Qantidade de Rodas do seu Veículo : '))
+peso1 = float(input('Digite o peso bruto em quilogramas : '))
+qtd1 = int(input('Digite o máximo de pessoas que o veículo suporta : '))
+if qtdrodas == 2 or qtdrodas == 3 and peso1<=300 and qdt1 >= 2 :
+    print('Melhor categoria é : A')
+elif qtdrodas == 4 and qtd1 <= 8 and peso1 <= 3500:
+    print('Melhor categoria é : B')
+elif qtdrodas >= 4 and peso1 >= 3500 and peso1 < 6000  and qtd1 < 20:
+    print('Melhor categoria é : C')
+elif qtdrodas >= 4 and peso1 > 1 and qtd1 > 8:
+    print('Melhor categoria é : D')
+elif qtdrodas >= 4 and peso1 > 6000:
+    print('Melhor categoria é : D')
+
+else:
+    print('Nenhuma Categoria')
