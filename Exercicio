@@ -15,6 +15,8 @@ elif qtdrodas >= 4 and peso1 > 1 and qtd1 > 8:
     print('Melhor categoria é : D')
 elif qtdrodas >= 4 and peso1 > 6000:
     print('Melhor categoria é : D')
+elif qtdrodas == 0 and peso1 == 0 and qtd1 ==0:
+    print('Nenhuma categoria')
 
 else:
     print('Nenhuma Categoria')
