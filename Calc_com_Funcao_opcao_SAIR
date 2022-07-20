@@ -1,0 +1,52 @@
+# Função Calculadora com opção de Sair
+# Carlos Negromonte
+
+#variaveis
+s1 = 1
+sub = 2
+mult = 3
+div = 4
+sair = 0
+
+#Texto para o usuario escolher a opção
+print("1 - Soma")
+print("2 - Subtração")
+print("3 - Multiplicação")
+print("4 - Divisão")
+print('0 - Sair')
+
+#Funções
+def adicao():
+    return n1+n2
+def subtracao():
+    return n1-n2
+def multiplicacao():
+    return n1*n2
+def divisao():
+    return n1/n2
+
+#Usuario irá escolher um numero
+operacao = int(input('Digite o número da operação de deseja acima! : '))
+if operacao == sair:
+    print('Fim do Programa')
+    exit()
+n1 = int(input('Digite primeiro Número : '))
+n2 = int(input('Digite Segundo Número : '))
+
+if operacao == s1:
+    soma = adicao()
+    print('O Resultado da Adição é : {}'.format(soma))
+elif operacao == sub:
+    menos = subtracao()
+    print('O Resultado da Subtração é : {}'.format(menos))
+elif operacao == mult:
+    vezes = multiplicacao()
+    print('O Resultado da Multiplicação é : {}'.format(vezes))
+elif operacao == div:
+    divi = divisao()
+    print('O Resultado da Divisão é : {}'.format(divi))
+
+else:
+    print('FIM')
+
+print('FIM')

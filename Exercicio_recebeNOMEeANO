@@ -1,0 +1,49 @@
+#Desenvolva um programa que recebe do usuário nome completo e ano de nascimento que seja entre 1922 e 2021.
+#A partir dessas informações, o sistema mostrará o nome do usuário e a idade que completou, ou completará,
+#no ano atual (2022).
+
+#Caso o usuário não digite um número ou apareça um inválido no campo do ano, o sistema informará o
+#erro e continuará perguntando até que um valor correto seja preenchido.
+
+#Trabalhe esse código em seu IDE, suba ele para sua conta no GitHub e compartilhe o link desse projeto no campo
+#ao lado para que outros desenvolvedores possam analisá-lo.
+
+def leiafloat(msg):
+    while True:
+        try:
+            n = str(input(msg))
+
+        except (ValueError, TypeError, KeyboardInterrupt):
+            print('\033[31mERRO: Digite Novamente!\033[m')
+            continue
+        except (KeyboardInterrupt):
+            print('\n\033[31mO usuario preferiu não DIGITAR!\033[m')
+            return 0
+        else:
+            return n
+
+def leiaInt(msg):
+    while True:
+        try:
+            n = int(input(msg))
+
+        except (ValueError, TypeError):
+            print('\033[31mERRO: Digite Novamente!\033[m')
+            continue
+        except (KeyboardInterrupt):
+            print('\n\033[31mO usuario preferiu não DIGITAR!\033[m')
+            return 0
+        else:
+            return n
+
+ano = 2022
+
+nome = leiafloat('Digite seu Nome Completo : ')
+nascimento = leiaInt('Digite o ano de Nascimento EX: 0000 : ')
+
+if nascimento > 1922 and nascimento < 2022:
+    idade = ano - nascimento
+    print(f'O seu nome é : {nome} e nasceu em : {nascimento}')
+    print(f'Sua idade é: {idade}')
+else:
+    print('\033[31mAno escolhido esta fora da faixa de 1922 a 2021.\033[m')
